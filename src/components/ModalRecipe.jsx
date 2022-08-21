@@ -1,4 +1,4 @@
-import { Modal, Image } from 'react-bootstrap'
+import { Modal, Button, Image } from 'react-bootstrap'
 import useRecipes from '../hooks/useRecipes'
 
 const ModalRecipe = () => {
@@ -34,6 +34,11 @@ const ModalRecipe = () => {
                         {recipe.strInstructions}
                         <h2>Ingredients and Quantities</h2>
                         {showIngredients()}
+                    </div>
+                    <div className="d-grid gap-2">
+                        <Button variant="warning" size="lg" onClick={handleModalClick}>
+                            Close
+                        </Button>
                     </div>
                 </Modal.Body>
             </Modal>
